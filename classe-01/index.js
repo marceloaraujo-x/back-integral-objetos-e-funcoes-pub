@@ -1,11 +1,13 @@
 function corrigirProva(prova) {
     let acertos = 0;
+    const valorDaQuestao = 2;
     for (let item of prova.questoes) {
         if (item.resposta === item.correta) {
             acertos++;
         }
     }
-    console.log(acertos);
+    const nota = valorDaQuestao * acertos;
+    console.log(`O aluno(a) ${prova.aluno} acertou ${acertos} questões e obteve nota ${nota}`);
 }
 
 const prova = {

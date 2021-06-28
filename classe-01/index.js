@@ -1,3 +1,13 @@
+function corrigirProva(prova) {
+    let acertos = 0;
+    for (let item of prova.questoes) {
+        if (item.resposta === item.correta) {
+            acertos++;
+        }
+    }
+    console.log(acertos);
+}
+
 const prova = {
     aluno: "João",
     materia: "Português",
@@ -26,3 +36,4 @@ const prova = {
     ]
 };
 
+corrigirProva(prova);
